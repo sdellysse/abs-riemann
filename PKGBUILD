@@ -7,6 +7,7 @@ arch=('any')
 url="http://riemann.io/"
 license=('EPL')
 depends=('java-runtime' 'bash')
+optdepends=('jdk: oracles jdk, recommended (AUR)')
 install='riemann.install'
 source=(
   "http://aphyr.com/riemann/$pkgname-$pkgver.tar.bz2"
