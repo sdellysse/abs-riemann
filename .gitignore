@@ -1,2 +1,4 @@
+/pkg
 /riemann-*.tar.bz2
+/riemann-*.pkg.tar.xz
 /src
