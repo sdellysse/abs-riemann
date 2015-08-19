@@ -1,4 +1,6 @@
-/pkg
-/riemann-*.tar.bz2
-/riemann-*.pkg.tar.xz
-/src
+/*
+!/PKGBUILD
+!/pkg.patch
+!/riemann.install
+!/riemann.service
+!/syslog.patch
