@@ -1,0 +1,16 @@
+--- tasks/leiningen/pkg.clj
++++ tasks/leiningen/pkg.clj
+@@ -1,12 +1,8 @@
+ (ns leiningen.pkg
+   (:use [leiningen.uberjar :only [uberjar]]
+-        [leiningen.fatdeb :only [fatdeb]]
+-        [leiningen.fatrpm :only [fatrpm]]
+         [leiningen.tar :only [tar]]))
+
+ (defn pkg [project]
+   (doto project
+     (uberjar)
+-    (tar false)
+-    (fatrpm false)
+-    (fatdeb false)))
++    (tar false)))
