@@ -14,7 +14,6 @@ source=(
   "git+https://github.com/aphyr/riemann.git#tag=$pkgver"
   riemann.service
   pkg.patch
-  syslog.patch
 )
 
 backup=('etc/riemann/riemann.config')
@@ -22,7 +21,6 @@ backup=('etc/riemann/riemann.config')
 prepare() {
   cd "$srcdir/$pkgname"
 
-  patch -p0 < $srcdir/syslog.patch
   patch -p0 < $srcdir/pkg.patch
 }
 
@@ -51,5 +49,4 @@ package() {
 }
 md5sums=('SKIP'
          'fb66da18a8186eff4fde4ea1890868f6'
-         '5abf5c39282fe8eedf162e4996426e13'
-         '8c247538e5ccfae0f6948d668751d8a8')
+         '5abf5c39282fe8eedf162e4996426e13')
